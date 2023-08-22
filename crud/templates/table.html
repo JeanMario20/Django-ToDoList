@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+</head>
+<body>
+    <a href="add_task">agregar una nueva tarea</a>
+    <h1>list of tasks</h1>
+    <table border="1" width="600">
+        <tr>Task
+        <td>To do</td>
+        </tr>
+
+        {% for task in allTask %}
+        <tr>
+            <!-- <td>{{task.id}}</td> -->
+            <td> {{task.task}}</td>
+            <td>
+                <a href="{% url 'edit-task' task.id %}">edit</a>
+                <a href="{% url 'delete-task' task.id%}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
