@@ -21,8 +21,8 @@
                 <!-- <td>{{task.id}}</td> -->
                 <td> {{task.task}}</td>
                 <td>
-                    <a href="{% url 'edit-task' task.id %}"><button class="button_uptdate">edit</button></a>
-                    <a href="{% url 'delete-task' task.id %}"><button>edit</button></a>
+                    <a href="{% url 'edit-task' task.id %}"><button class=" btn button_uptdate">edit</button></a>
+                    <a href="{% url 'delete-task' task.id %}"><button class="btn button_delete">delete</button></a>
     
                 </td>
                 </tr>
@@ -30,7 +30,11 @@
             </tbody>
             
         </table>
-        <a href="add_task">agregar una nueva tarea</a>
+        <div>
+            <a href="add_task"><button class="addTask_button">agregar una nueva tarea</button></a>
+        </div>
+        
+
     </div>
 </body>
 </html>

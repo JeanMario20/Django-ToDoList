@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'crud/styles.css'%}">
     <title>Add a new task</title>
 </head>
 <body>
-    <h1>Create a new task</h1>
-    {% block content %}
-    <form action="" method="POST">
-        {% csrf_token %}
-        <h2>Que es lo que haras hoy?</h2>
-        <br>
-        {{form.as_p}}
-        <input type="submit" value="Submit">
-    </form>
-    {% endblock content %}
-    <a href="list/..">cancelar</a>
+    <div class="form">
+        {% block content %}
+        <form action="" method="POST">
+            <h1>Create a new task</h1>
+            {% csrf_token %}
+            <h2>Que es lo que haras hoy?</h2>
+            <br>
+            {{form.as_p}}
+            <input type="submit" value="Submit">
+        </form>
+        <a href="list/..">cancelar</a>
+        {% endblock content %}
+        
+    </div>
+    
 </body>
 </html>

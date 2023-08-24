@@ -1,18 +1,15 @@
 body{
     background-color: rgb(189, 184, 184);
+    margin: 0;
 }
 
 table{
     width: 50%;
     margin: 0 5%;
-    text-align: left;
 }
 
-button{
-    border: none;
-    padding: 16px 20px;
-    
-}
+
+
 
 tbody td {
     background-color: rgba(255,255,255,0);
@@ -30,7 +27,7 @@ tbody tr:hover td {
 }
 
 td {
-    transform-origin:center left;
+    transform-origin:center right;
     transition-property: transform;
     transition-duration: 0.4s;
     transition-timing-function: ease-in-out;
@@ -44,18 +41,67 @@ td {
     height: 100vh;
 }
 
+.btn{
+    border: none;
+    padding: 16px 20px;
+    border-radius: 5px;
+}
+
+.addTask_button{
+    color: white;
+    background-color: grey;
+    border: none;
+    padding: 16px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.addTask_button:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    transition: 0.5s;
+}
+
 .button_uptdate{
     background-color: #4CAF50;
-    color: black;
+    color: white;
+    cursor: pointer;
 }
 
 .button_uptdate:hover{
     background-color: white;
     color: black;
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
+.button_delete{
+    background-color: red;
+    color: white;
+    text-align: right;
+    cursor: pointer;
+}
 
-/* tr:hover td{
-    transform: scale(1.1);
-} */
+.button_delete:hover{
+    background: white;
+    color: white;
+    border: 1px solid black
+}
+
+/* ------------------------------------------------- */
+
+/* ------------------FORM STYLES */
+
+form{
+    text-align: center;
+}
+.form{
+    background-color: grey;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 300px;
+}
